@@ -1,5 +1,5 @@
 #install Docker runtime
-
+sudo -s
 # Add repo and Install packages
 sudo apt update
 sudo apt install -y curl gnupg2 software-properties-common apt-transport-https ca-certificates
@@ -64,7 +64,7 @@ sudo apt install cri-o cri-o-runc
 sudo systemctl daemon-reload
 sudo systemctl restart crio
 sudo systemctl enable crio
-sudo systemctl status crio
+#sudo systemctl status crio
 
 #install containered
 # Configure persistent loading of modules
@@ -106,4 +106,4 @@ containerd config default>/etc/containerd/config.toml
 # restart containerd
 sudo systemctl restart containerd
 sudo systemctl enable containerd
-systemctl status  containerd
+#systemctl status  containerd
