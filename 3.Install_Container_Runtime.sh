@@ -1,18 +1,11 @@
 echo step1
 
-#install Docker runtime
+# install Docker runtime
 # Add repo and Install packages
 echo start update
 sudo apt update
 sudo apt install -y curl gnupg2 software-properties-common apt-transport-https ca-certificates
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-
-#sudo sed -i '58d' /etc/apt/sources.list
-
-echo start update
-sudo apt update
-sudo apt install -y containerd.io docker-ce docker-ce-cli
 
 echo Create required directories
 sudo mkdir -p /etc/systemd/system/docker.service.d
@@ -51,13 +44,14 @@ echo Reload sysctl
 sudo sysctl --system
 
 echo Add Cri-o repo
-#sudo su -
+# sudo su - 
 OS="xUbuntu_20.04"
 VERSION=1.22
 echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/ /" > /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
 echo "deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$VERSION/$OS/ /" > /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:$VERSION.list
 curl -L https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$VERSION/$OS/Release.key | apt-key add -
 curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/Release.key | apt-key add -
+
 
 ## Execute commands directly in the current directory
 echo Update CRI-O CIDR subnet
@@ -72,8 +66,9 @@ echo Start and enable Service
 sudo systemctl daemon-reload
 sudo systemctl restart crio
 sudo systemctl enable crio
-echo sudo systemctl status crio
+# sudo systemctl status crio
 
+echo step 3
 echo install containered
 echo Configure persistent loading of modules
 sudo tee /etc/modules-load.d/containerd.conf <<EOF
@@ -100,14 +95,13 @@ sudo apt install -y curl gnupg2 software-properties-common apt-transport-https c
 
 echo Add Docker repo
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 echo Install containerd
 sudo apt update
 sudo apt install -y containerd.io
 
 echo Configure containerd and start service
-#sudo su -
+# sudo su -
 mkdir -p /etc/containerd
 containerd config default>/etc/containerd/config.toml
 
@@ -115,3 +109,4 @@ echo restart containerd
 sudo systemctl restart containerd
 sudo systemctl enable containerd
 #systemctl status  containerd
+
