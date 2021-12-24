@@ -16,4 +16,5 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 apt-cache madison docker-ce
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo chmod 666 /var/run/docker.sock
 sudo docker run hello-world
