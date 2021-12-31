@@ -1,0 +1,8 @@
+version: '3'       # docker compose version
+services: 
+  redis-server:
+    image: 'redis' # making it using the 'redis' image
+  node-app:
+    build: .       # making it using the Dockerfile in the current directory
+    ports:         # map port 8001 to 8001
+    - "80081:8081"  # <local machine port> : <container port>
