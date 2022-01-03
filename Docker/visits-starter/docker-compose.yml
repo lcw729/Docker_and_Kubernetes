@@ -3,6 +3,7 @@ services:
   redis-server:
     image: 'redis' # making it using the 'redis' image
   node-app:
+    restart: on-failure  # restart policy
     build: .       # making it using the Dockerfile in the current directory
     ports:         # map port 8001 to 8001
-    - "80081:8081"  # <local machine port> : <container port>
+    - "8081:8081"  # <local machine port> : <container port>
