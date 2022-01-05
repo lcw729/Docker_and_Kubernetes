@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-deployment
+  labels:
+    app: test-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-deployment
+  template:
+    metadata:
+      labels:
+        app: test-deployment
+    spec:
+      containers:
+      - name: test-deployment
+        image: nginx
+        ports:
+        - containerPort: 8080
+        volumeMounts: 
+        - mountPath: "/var/log/test.log" # 볼륨을 마운트할 컨테이너 내부 경로
+          name: test-volume # 볼륨 마운트 정보 이름 지정
+      volumes:
+      - name: test-volume # 볼륨 마운트 이름
+        persistentVolumeClaim: # 연결할 PVC 정보
+          claimName: pvc1
+      
