@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostpath-pod
+spec:
+  containers:
+  - name: host-pod
+    image: nginx
+    volumeMounts:
+    - mountPath: /hostpath
+      name: hostpath-volume
+  volumes:
+  - name: hostpath-volume
+    hostPath:
+      path: /tmp/hostpath 
+      type: DirectoryOrCreate
+
