@@ -3,6 +3,10 @@
 ### Upload Blog ###
 1. [Why use Docker? What is Docker?]()
 
+
+### Kubernetes ###
+[Volume - emptydir,hostpath](https://chaaaaewoncode.tistory.com/46)
+
 ### Notion ###
 1. [Why use Docker?](https://zigzag-manicure-22b.notion.site/why-use-docker-1e710d0f5a1946bbb7e5de046773b110)
 2. [What is Docker?](https://zigzag-manicure-22b.notion.site/What-is-Docker-67bff102b59347e59cb1570438bc7db6)
