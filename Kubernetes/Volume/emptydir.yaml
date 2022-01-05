@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: emptydir-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: /emptydir # 실행될 컨테이너 내부 디렉터리
+      name: emptydir-volume # 마운트할 볼륨이름
+  volumes:
+  - name: emptydir-volume # 볼륨 이름
+    emptyDir: {}
