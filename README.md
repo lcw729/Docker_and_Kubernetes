@@ -1,10 +1,8 @@
 # Docker_and_Kubernetes
 
-### Upload Blog ###
-1. [Why use Docker? What is Docker?]()
-
-
 ### Kubernetes ###
+[1.쿠버네티스 소개하기](https://chaaaaewoncode.tistory.com/53)
+
 [Volume - emptydir,hostpath](https://chaaaaewoncode.tistory.com/46)
 
 ### Notion ###
