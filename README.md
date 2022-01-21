@@ -2,6 +2,7 @@
 
 ### Kubernetes ###
 1. [쿠버네티스 소개하기](https://chaaaaewoncode.tistory.com/53)
+5. [쿠버네티스 Pod](https://chaaaaewoncode.tistory.com/87)
 
 - [Kubernetes Resource Request & Limit](https://chaaaaewoncode.tistory.com/78)
 - [Volume - emptydir,hostpath](https://chaaaaewoncode.tistory.com/46)
