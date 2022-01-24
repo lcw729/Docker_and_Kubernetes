@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myweb
+  namespace: product
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.14
+      resources:
+        requests:
+          cpu: 200m
+          memory: 500Mi
+        limits:
+          cpu: 1
+          memory: 1Gi
+      env:
+      - name: DB
+        value: mydb
+
+
