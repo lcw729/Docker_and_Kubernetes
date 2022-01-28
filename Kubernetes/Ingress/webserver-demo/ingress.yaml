@@ -13,10 +13,10 @@ spec:
             name: marvel-service
             port: 
               number: 80
-      - path: /pay
-        pathType: Prefix
-        backend:
-          service:
-            name: pay-service
-            port:
-              number: 80
+#      - path: /pay
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: pay-service
+#            port:
+#              number: 80

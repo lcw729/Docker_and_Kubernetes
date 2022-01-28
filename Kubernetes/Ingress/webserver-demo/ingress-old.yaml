@@ -10,7 +10,7 @@ spec:
         backend: 
           serviceName: marvel-service
           servicePort: 80
-      - path: /pay
-        backend:
-          serviceName: pay-service
-          servicePort: 80
+#      - path: /pay
+#        backend:
+#          serviceName: pay-service
+#          servicePort: 80
