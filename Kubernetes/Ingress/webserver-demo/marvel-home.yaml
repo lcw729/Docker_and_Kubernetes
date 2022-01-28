@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: marvel-container
-        image: nginx:1.14
+        image: smlinux/marvel-collection
         ports:
         - containerPort: 80
 ---
