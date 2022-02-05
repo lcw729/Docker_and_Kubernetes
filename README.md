@@ -3,7 +3,9 @@
 ### Kubernetes ###
 1. [쿠버네티스 소개하기](https://chaaaaewoncode.tistory.com/53)
 4. [쿠버네티스 아키텍처](https://chaaaaewoncode.tistory.com/98)
-5. [쿠버네티스 Pod](https://chaaaaewoncode.tistory.com/87)
+5. 쿠버네티스 Pod
+   - [쿠버네티스 Pod & multipod](https://chaaaaewoncode.tistory.com/87)
+   - [livenessProbe](https://chaaaaewoncode.tistory.com/99)
 7. 쿠버네티스 Controller
    - [Replication Controller](https://chaaaaewoncode.tistory.com/89)
    - [ReplicaSet](https://chaaaaewoncode.tistory.com/90)
