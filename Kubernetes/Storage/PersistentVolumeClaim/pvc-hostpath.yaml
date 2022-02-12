@@ -3,10 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc-hostpath
 spec:
-  accessModes:
-  - ReadWriteOnce
-  volumeMode: Filesystem
   resources:
     requests:
-      storage: 1Gi
-  storageClassName: manual 
+      storage: 2Gi
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: "manual"
