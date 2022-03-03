@@ -10,5 +10,5 @@ spec:
     - ReadWriteMany
   nfs:
     server: 10.0.5.86
-    path: "~/.kube/"
+    path: "/root/.kube/"
     readOnly: false
