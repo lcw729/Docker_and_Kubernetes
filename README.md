@@ -9,6 +9,8 @@
 7. 쿠버네티스 Controller
    - [Replication Controller](https://chaaaaewoncode.tistory.com/89)
    - [ReplicaSet](https://chaaaaewoncode.tistory.com/90)
+12. 파드 스케줄링
+   - [NodeSelector, Affinity&AntiAffinity](https://chaaaaewoncode.tistory.com/107)
 
 - [Kubernetes Resource Request & Limit](https://chaaaaewoncode.tistory.com/78)
 - [Volume - emptydir,hostpath](https://chaaaaewoncode.tistory.com/46)
