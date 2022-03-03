@@ -14,6 +14,7 @@
 
 12. 파드 스케줄링
       - [NodeSelector, Affinity&AntiAffinity](https://chaaaaewoncode.tistory.com/107)
+      - [Taint&Toleration, Cordon&Drain](https://chaaaaewoncode.tistory.com/108)
 
 14. 데이터 저장
        - [Volume - emptydir,hostpath](https://chaaaaewoncode.tistory.com/46)
