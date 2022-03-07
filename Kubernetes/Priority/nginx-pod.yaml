@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: high-nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  priorityClassName: high-priority 
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: higher-nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  priorityClassName: higher-priority
