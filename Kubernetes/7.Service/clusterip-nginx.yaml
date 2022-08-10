@@ -4,10 +4,24 @@ metadata:
   name: clusterip-service
 spec:
   type: ClusterIP
-  clusterIP: 10.100.100.100  # clusterIP 직접 지정
-  selector: # pod의 label
-    app: webui
+  clusterIP: 10.100.100.102
+  selector:
+    app: nginx
   ports:
   - protocol: TCP
-    port: 80  # clusterIP의port
-    targetPort: 80 # pod의 port
+    port: 80
+    targetPort: 8080
+---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: clusterip-service
+# spec:
+#   type: ClusterIP
+#   clusterIP: 10.100.100.100  # clusterIP 직접 지정
+#   selector: # pod의 label
+#     app: webui
+#   ports:
+#   - protocol: TCP
+#     port: 80  # clusterIP의port
+#     targetPort: 80 # pod의 port
