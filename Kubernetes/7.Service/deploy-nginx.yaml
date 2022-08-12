@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deploy
   labels:
-    app: nginx-deployment
+    app: nginx
 spec:
   replicas: 2
   selector:
@@ -16,8 +16,31 @@ spec:
     spec:
       containers:
       - name: nginx-deploy
-        image: nginx:1.14
+        image: nginx:1.14.2
         ports:
-        - containerPort: 8080
-      
+        - containerPort: 80
+          name: test
   
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: nginx-deploy
+#   labels:
+#     app: nginx
+# spec:
+#   replicas: 2
+#   selector:
+#     matchLabels:
+#       app: nginx
+#   template:
+#     metadata:
+#       labels:
+#         app: nginx
+#     spec:
+#       containers:
+#       - name: nginx-deploy
+#         image: nginx:1.14.2
+#         ports:
+#         - containerPort: 80
+#           name: test
+      

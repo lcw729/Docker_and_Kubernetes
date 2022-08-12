@@ -6,9 +6,22 @@ spec:
   type: NodePort
   clusterIP: 10.100.100.200
   selector: 
-    app: webui
+    app: nginx
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+  - port: 8090
+    targetPort: test
     nodePort: 30200
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: nodeport-service
+# spec:
+#   type: NodePort
+#   clusterIP: 10.100.100.200
+#   selector: 
+#     app: nginx
+#   ports:
+#   - protocol: TCP
+#     port: 80
+#     targetPort: test
+#     nodePort: 30200
