@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-reader
+spec:
+  serviceAccountName: sa-viewer
+  containers:
+  - name: pod-reader
+    image: nginx:1.14
+    ports:
+    - containerPort: 8080

@@ -20,12 +20,14 @@ sudo systemctl disable firewalld
 
 # Installing kubeadm, kubelet and kubectl
 sudo apt update
-sudo apt -y install curl apt-transport-https
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt -y install curl apt-transport-https ca-certificates curl
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo apt update
 sudo apt -y install vim git curl wget kubelet=1.22.0-00 kubeadm=1.22.0-00 kubectl=1.22.0-00 --allow-downgrades
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
 sudo apt-mark hold kubelet kubeadm kubectl
 
+kubectl /usr/local/bin/chmod +x /usr/local/bin/kubectl
 kubectl version --client && kubeadm version

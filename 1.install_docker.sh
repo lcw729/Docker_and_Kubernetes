@@ -18,3 +18,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 sudo chmod 666 /var/run/docker.sock
 sudo docker run hello-world
+
+sudo systemctl enable docker
+sudo systemctl start docker

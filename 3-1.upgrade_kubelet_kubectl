@@ -1,7 +1,0 @@
-#!/bin/bash
-apt-mark unhold kubelet kubectl && \
-apt-get update && apt-get install -y kubelet=$1 kubectl=$1 && \
-apt-mark hold kubelet kubectl
-
-sudo systemctl daemon-reload
-sudo systemctl restart kubelet
